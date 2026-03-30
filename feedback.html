@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Wonders of World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <!-- navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E"
+                    alt="WOW" class="logo-img">
+                <span class="logo-text">WOW</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="seven-wonders.html" class="nav-link">Seven Wonders</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="download.html" class="nav-link">Download</a></li>
+                <li><a href="travel.html" class="nav-link">Travel</a></li>
+                <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav> 
+
+    <!--feeback-section-main-heading -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Feedback & Queries</h1>
+            <p>We value your input and suggestions</p>
+        </div>
+    </section>
+  
+      <!-- feedback -->
+    <section class="feedback-page">
+        <div class="container">
+            <div class="feedback-container">
+
+                <form class="feedback-form" id="feedbackForm">
+
+                    <div class="form-group">
+                        <label for="feedbackName">Full Name</label>
+                        <input type="text" id="feedbackName" name="name">
+                        <small id="nameError" class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email Address</label>
+                        <input type="email" id="feedbackEmail" name="email">
+                        <small id="emailError" class="error-message"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackMessage">Your Message</label>
+                        <textarea id="feedbackMessage" name="message" rows="6"></textarea>
+                        <small id="messageError" class="error-message"></small>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+
+                </form>
+
+                <div class="success-message" id="feedbackSuccess">
+                    <span class="success-icon">✓</span>
+                    <h3>Thank You!</h3>
+                    <p>Your feedback has been received successfully</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E"
+                        alt="WOW">
+                    <span>Wonders of World</span>
+                </div>
+                <p class="footer-text">Exploring humanity's greatest architectural achievements</p>
+                <p class="footer-copyright">&copy; 2026 Wonders of World Educational Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- <script src="script.js"></script> -->
+    <script>
+
+        const feedbackForm = document.getElementById('feedbackForm');
+        const feedbackSuccess = document.getElementById('feedbackSuccess');
+
+        feedbackForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('feedbackName').value.trim();
+            const email = document.getElementById('feedbackEmail').value.trim();
+            const message = document.getElementById('feedbackMessage').value.trim();
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+
+            // Reset errors
+            nameError.textContent = "";
+            emailError.textContent = "";
+            messageError.textContent = "";
+
+            let isValid = true;
+
+            // Name Validation
+            if (name === "") {
+                nameError.textContent = "Full name is required";
+                isValid = false;
+            } else if (!isValidFullName(name)) {
+                nameError.textContent = "Enter at least 2 words full name (letters only)";
+                isValid = false;
+            }
+
+            // Email Validation
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                emailError.textContent = "Enter valid email address";
+                isValid = false;
+            }
+
+            // Message Validation
+            if (message === "") {
+                messageError.textContent = "Message is required";
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Success
+            feedbackForm.style.display = "none";
+            feedbackSuccess.classList.add("show");
+
+            setTimeout(function () {
+                feedbackSuccess.classList.remove("show");
+                feedbackForm.style.display = "block";
+                feedbackForm.reset();
+            }, 3000);
+        });
+
+
+        // Full Name Validation (at least 2 words)
+        function isValidFullName(name) {
+            const nameRegex = /^[A-Za-z]+(\s[A-Za-z]+)+$/;
+            return nameRegex.test(name);
+        }
+
+        // Email Validation
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // ==========================================
+// NAVIGATION FUNCTIONALITY
+// ==========================================
+
+// Sticky navigation on scroll
+const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Active navigation link based on scroll position
+const sections = document.querySelectorAll('section[id]');
+
+function highlightNavigation() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            if (navLink) navLink.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', highlightNavigation);
+
+
+
+
+    </script>
+</body>
+
+</html>

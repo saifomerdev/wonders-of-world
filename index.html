@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home - Wonders of World</title>
+    <meta name="description" content="Explore the Seven Wonders and historic places that shaped human civilization">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="keywords"
+        content="wonders of world, wonders of world names, wonders of worlkd near me, wonders of world images, wonders taj mahal, seven wonders">
+    <meta name="description"
+        content="Explore the Seven Wonders of the World with detailed travel guides, stunning galleries, history, and tips to plan your perfect journey.">
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E"
+                    alt="WOW Logo" class="logo-img">
+                <span class="logo-text">WOW</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="seven-wonders.html" class="nav-link">Seven Wonders</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="download.html" class="nav-link">Download</a></li>
+                <li><a href="travel.html" class="nav-link">Travel</a></li>
+                <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Hero Carousel -->
+    <section class="hero">
+        <div class="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('images/great-wall-of-china.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Great Wall of China</h1>
+                    <p class="hero-tagline">A Monument to Human Perseverance</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: url('images/petra.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Petra</h1>
+                    <p class="hero-tagline">The Rose City Carved in Stone</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: url('images/christ-the-redeemer.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Christ the Redeemer</h1>
+                    <p class="hero-tagline">Guardian of Rio de Janeiro</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide" style="background-image: url('images/machu-pichu.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Machu Picchu</h1>
+                    <p class="hero-tagline">Lost City of the Incas</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="hero-slide" style="background-image: url('images/chichen-itza.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Chichen Itza</h1>
+                    <p class="hero-tagline">Mayan Astronomical Marvel</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="hero-slide" style="background-image: url('images/colosseum.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Colosseum</h1>
+                    <p class="hero-tagline">Icon of the Roman Empire</p>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="hero-slide" style="background-image: url('images/taj-mahal.jpg')">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">Wonder: Taj Mahal</h1>
+                    <p class="hero-tagline">Monument to Eternal Love</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control carousel-prev" onclick="changeSlide(-1)" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-control carousel-next" onclick="changeSlide(1)" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+        <!-- Indicator Dots -->
+        <div class="carousel-indicators">
+            <button class="indicator-dot active" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
+            <button class="indicator-dot" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
+            <button class="indicator-dot" onclick="goToSlide(2)" aria-label="Go to slide 3"></button>
+            <button class="indicator-dot" onclick="goToSlide(3)" aria-label="Go to slide 4"></button>
+            <button class="indicator-dot" onclick="goToSlide(4)" aria-label="Go to slide 5"></button>
+            <button class="indicator-dot" onclick="goToSlide(5)" aria-label="Go to slide 6"></button>
+            <button class="indicator-dot" onclick="goToSlide(6)" aria-label="Go to slide 7"></button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Welcome</span>
+                <h2 class="section-title">Discover the Wonders That Shaped History</h2>
+                <p class="section-description">Journey through time and explore humanity's greatest architectural
+                    achievements. From ancient civilizations to modern marvels, discover the stories behind the world's
+                    most iconic monuments.</p>
+            </div>
+
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="intro-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48"
+                            height="48" color="#ffffff" fill="none" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 5.3H9M15 5.3H22M22 9.7H16.4396C15.3109 9.7 14.7465 9.7 14.4465 9.29739C14.1464 8.89478 14.2571 8.28603 14.4784 7.06855L14.5216 6.83145C14.7429 5.61397 14.8536 5.00522 14.5535 4.60261C14.2535 4.2 13.6891 4.2 12.5604 4.2H11.4396C10.3109 4.2 9.74652 4.2 9.44646 4.60261C9.1464 5.00522 9.25709 5.61397 9.47845 6.83145L9.52155 7.06855C9.74291 8.28603 9.8536 8.89478 9.55354 9.29739C9.25348 9.7 8.68912 9.7 7.56039 9.7H2M13.5 4.2C13.5 3.65 13.7 2.44 14.5 2M10.5 4.2C10.5 3.65 10.3 2.44 9.5 2M3 5.3V22M21 5.3V22M18 9.7V22M15 22V9.7H9V22M6 9.7V22M2 22H22" />
+                        </svg></div>
+                    <h3>Seven Wonders</h3>
+                    <p>Explore the New Seven Wonders of the World, each representing unique cultural heritage and
+                        architectural brilliance.</p>
+                    <a href="seven-wonders.html" class="intro-link">Explore Wonders →</a>
+                </div>
+
+                <div class="intro-card">
+                    <div class="intro-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64"
+                            height="64" color="#ffffff" fill="none" stroke="#ffffff" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M3 9H18C18.9319 9 19.3978 9 19.7654 9.15224C20.2554 9.35523 20.6448 9.74458 20.8478 10.2346C21 10.6022 21 11.0681 21 12C21 12.9319 21 13.3978 20.8478 13.7654C20.6448 14.2554 20.2554 14.6448 19.7654 14.8478C19.3978 15 18.9319 15 18 15H13" />
+                            <path d="M6 15H3" />
+                            <path
+                                d="M13 15H15C15.9319 15 16.3978 15 16.7654 15.1522C17.2554 15.3552 17.6448 15.7446 17.8478 16.2346C18 16.6022 18 17.0681 18 18C18 18.9319 18 19.3978 17.8478 19.7654C17.6448 20.2554 17.2554 20.6448 16.7654 20.8478C16.3978 21 15.9319 21 15 21H3" />
+                            <path
+                                d="M3 3H14C14.9319 3 15.3978 3 15.7654 3.15224C16.2554 3.35523 16.6448 3.74458 16.8478 4.23463C17 4.60218 17 5.06812 17 6C17 6.93188 17 7.39782 16.8478 7.76537C16.6448 8.25542 16.2554 8.64477 15.7654 8.84776C15.3978 9 14.9319 9 14 9H3" />
+                            <path
+                                d="M13 9L13 15.1905C13 16.3045 13 16.8616 12.6735 16.9803C12.3469 17.0991 11.9782 16.6761 11.2407 15.8303L10.7593 15.278C10.4064 14.8733 10.23 14.6709 10 14.6709C9.77003 14.6709 9.5936 14.8733 9.24074 15.278L8.75926 15.8303C8.02179 16.6761 7.65305 17.0991 7.32653 16.9803C7 16.8616 7 16.3045 7 15.1905L7 9" />
+                        </svg></div>
+                    <h3>Rich History</h3>
+                    <p>Dive deep into the historical background, cultural significance, and global importance of each
+                        monument.</p>
+                    <a href="categories.html" class="intro-link">View Categories →</a>
+                </div>
+
+                <div class="intro-card">
+                    <div class="intro-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                            fill="currentColor" class="bi bi-image-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                        </svg></div>
+                    <h3>Visual Gallery</h3>
+                    <p>Browse through stunning images and immersive galleries showcasing the beauty of these timeless
+                        structures.</p>
+                    <a href="gallery.html" class="intro-link">View Gallery →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Wonders Featured</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Historic Places</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Era Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Educational Content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E"
+                        alt="WOW">
+                    <span>Wonders of World</span>
+                </div>
+                <div class="footer-nav">
+                    <a href="seven-wonders.html">Seven Wonders</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="footer-text">Exploring humanity's greatest architectural achievements</p>
+                <p class="footer-copyright">&copy; 2026 Wonders of World Educational Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

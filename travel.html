@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Wonders of World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E" alt="WOW" class="logo-img">
+                    <span class="logo-text">WOW</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="seven-wonders.html" class="nav-link">Seven Wonders</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="download.html" class="nav-link">Download</a></li>
+                <li><a href="travel.html" class="nav-link active">Travel</a></li>
+                <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="sitemap.html" class="nav-link">Site Map</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- travel-section-main-heading -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Travel & Location Services</h1>
+            <p>Plan your journey to the wonders of the world</p>
+        </div>
+    </section>
+    
+    <!-- geolocation page -->
+    <section class="geolocation-page">
+        <div class="container">
+            <div class="geo-content">
+                <div class="geo-text">
+                    <span class="section-label">Find Your Nearest Wonder</span>
+                    <h2 class="section-title">Discover Wonders Near You</h2>
+                    <p>Use your location to find the closest historic wonder and plan your visit</p>
+                    <button class="geo-btn" onclick="getLocation()">Find Nearby Wonders</button>
+                </div>
+                <div class="geo-result" id="geoResult">
+                    <div class="geo-placeholder">
+                        <span class="geo-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#ffffff" fill="none" stroke="#ffffff" stroke-width="1.5">
+                            <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" />
+                            <path d="M20 5.69899C19.0653 5.76636 17.8681 6.12824 17.0379 7.20277C15.5385 9.14361 14.039 9.30556 13.0394 8.65861C11.5399 7.6882 12.8 6.11636 11.0401 5.26215C9.89313 4.70542 9.73321 3.19045 10.3716 2" />
+                            <path d="M2 11C2.7625 11.6621 3.83046 12.2682 5.08874 12.2682C7.68843 12.2682 8.20837 12.7649 8.20837 14.7518C8.20837 16.7387 8.20837 16.7387 8.72831 18.2288C9.06651 19.1981 9.18472 20.1674 8.5106 21" />
+                            <path d="M22 13.4523C21.1129 12.9411 20 12.7308 18.8734 13.5405C16.7177 15.0898 15.2314 13.806 14.5619 15.0889C13.5765 16.9775 17.0957 17.5711 14 22" />
+                        </svg></span>
+                        <p>Click the button to discover wonders near you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- travel -->
+    <section class="travel-page">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Plan Your Journey</span>
+                <h2 class="section-title">Travel & Transportation</h2>
+                <p class="section-description">Convenient travel options to reach the wonders</p>
+            </div>
+            <div class="travel-grid">
+                <div class="travel-card">
+                    <div class="travel-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#ffffff" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.00391 10V5M11.0039 10V5M16.0039 10V5.5" />
+                        <path d="M5.01609 17C3.59614 17 2.88616 17 2.44503 16.5607C2.00391 16.1213 2.00391 15.4142 2.00391 14V8C2.00391 6.58579 2.00391 5.87868 2.44503 5.43934C2.88616 5 3.59614 5 5.01609 5H12.1005C15.5742 5 17.311 5 18.6402 5.70624C19.619 6.22633 20.4346 7.0055 20.9971 7.95786C21.7609 9.25111 21.8332 10.9794 21.9779 14.436C22.0168 15.3678 22.0363 15.8337 21.8542 16.1862C21.7204 16.4454 21.5135 16.6601 21.2591 16.8041C20.913 17 20.4449 17 19.5085 17H19.0039M9.00391 17H15.0039" />
+                        <path d="M7.00391 19C8.10848 19 9.00391 18.1046 9.00391 17C9.00391 15.8954 8.10848 15 7.00391 15C5.89934 15 5.00391 15.8954 5.00391 17C5.00391 18.1046 5.89934 19 7.00391 19Z" />
+                        <path d="M17.0039 19C18.1085 19 19.0039 18.1046 19.0039 17C19.0039 15.8954 18.1085 15 17.0039 15C15.8993 15 15.0039 15.8954 15.0039 17C15.0039 18.1046 15.8993 19 17.0039 19Z" />
+                        <path d="M1.99609 10.0009H15.3641C15.9911 10.0009 16.2041 10.3681 16.6841 10.9441C17.2361 11.4841 17.6093 11.8628 18.1241 11.9401C18.8441 12.0481 21.5081 11.9941 21.5081 11.9941" />
+                    </svg></div>
+                    <h3>Bus Services</h3>
+                    <p>Comfortable and affordable bus routes to all major historic sites</p>
+                    <a href="https://www.rome2rio.com/" class="travel-link">View Routes</a>
+                </div>
+                <div class="travel-card">
+                    <div class="travel-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" color="#ffffff" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 9.50003L5.27531 4.47565C4.85705 4.0245 4.92403 3.69496 5.41729 3.40965C6.34454 2.8733 7.06689 2.85873 8.04428 3.39511L12.949 6.08675C13.2982 6.27836 13.6406 6.47259 14 6.57855" />
+                        <path d="M12.5 13.6632L14.6103 20.4697C14.7826 21.0255 15.086 21.1263 15.556 20.8568C16.4396 20.3501 16.7958 19.765 16.8197 18.7107L16.9395 13.4198C16.9555 12.7131 16.9526 12.0215 17.5 11.5" />
+                        <path d="M8.32846 10.9843L10.2154 9.60557L14.6436 6.37707C14.6436 6.37707 16.2785 5.17593 17.1919 4.77581C18.2765 4.30067 19.2869 4.52156 20.3739 4.82515C20.9362 4.98218 21.2173 5.06069 21.4202 5.20717C21.742 5.43958 21.9513 5.79728 21.9943 6.18852C22.0215 6.4351 21.9498 6.71459 21.8065 7.27356L21.8065 7.27358C21.5294 8.35431 21.2181 9.32819 20.2588 10.0175C19.4509 10.598 17.5793 11.3946 17.5793 11.3946L12.5317 13.5645L10.3782 14.4876L10.3782 14.4876C9.5974 14.8223 9.207 14.9896 8.94139 15.3002C8.31933 16.0275 8.23148 17.3438 7.99931 18.2494C7.87101 18.7498 7.16748 19.6171 6.54058 19.4869C6.15355 19.4065 6.14613 18.922 6.09796 18.6131L5.6342 15.6389C5.5233 14.9276 5.51479 14.9131 4.94599 14.4627L2.56757 12.5793C2.32053 12.3836 1.89903 12.135 2.022 11.7641C2.22119 11.1633 3.33408 10.9957 3.83747 11.1363C4.74834 11.3907 5.94747 11.9738 6.89684 11.8058C7.3022 11.7341 7.64428 11.4842 8.32844 10.9843L8.32846 10.9843Z" />
+                    </svg></div>
+                    <h3>Flight Bookings</h3>
+                    <p>Find the best flight deals to destinations near the Seven Wonders</p>
+                    <a href="https://www.booking.com/index.html?label=gen173bo-10CAEoggI46AdIM1gDaLUBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBmAICqAIBuALfjb3MBsACAdICJDg4YTZkMzA2LWQyMTUtNDIzOS1iNDhiLTI5MjZmN2MzNDAwMdgCAeACAQ&sid=56914600f78358a510859944e1ed7e4e&aid=304142" class="travel-link">Book Flights</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23C9A55A' d='M20 2L4 12v16l16 10 16-10V12L20 2zm0 4.5l12 7.5v11l-12 7.5-12-7.5v-11l12-7.5z'/%3E%3Cpath fill='%23C9A55A' d='M20 10l-8 5v10l8 5 8-5V15l-8-5zm0 3l5 3.125V24l-5 3.125L15 24v-7.875L20 13z'/%3E%3C/svg%3E" alt="WOW">
+                    <span>Wonders of World</span>
+                </div>
+                <p class="footer-text">Exploring humanity's greatest architectural achievements</p>
+                <p class="footer-copyright">&copy; 2026 Wonders of World Educational Project.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- <script src="script.js"></script> -->
+     <script>const wonderLocations = {
+    'great-wall': { lat: 40.4319, lon: 116.5704, name: 'Great Wall of China' },
+    'petra': { lat: 30.3285, lon: 35.4444, name: 'Petra' },
+    'christ-redeemer': { lat: -22.9519, lon: -43.2105, name: 'Christ the Redeemer' },
+    'machu-picchu': { lat: -13.1631, lon: -72.5450, name: 'Machu Picchu' },
+    'chichen-itza': { lat: 20.6843, lon: -88.5678, name: 'Chichen Itza' },
+    'colosseum': { lat: 41.8902, lon: 12.4922, name: 'Colosseum' },
+    'taj-mahal': { lat: 27.1751, lon: 78.0421, name: 'Taj Mahal' }
+};
+
+function getLocation() {
+    const geoResult = document.getElementById('geoResult');
+
+    if (!navigator.geolocation) {
+        geoResult.innerHTML = `
+            <div class="geo-placeholder">
+                <span class="geo-icon">❌</span>
+                <p>Geolocation is not supported by your browser</p>
+            </div>
+        `;
+        return;
+    }
+
+    geoResult.innerHTML = `
+        <div class="geo-placeholder">
+            <span class="geo-icon">📍</span>
+            <p>Detecting your location...</p>
+        </div>
+    `;
+
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
+            findNearestWonder(userLat, userLon);
+        },
+        error => {
+            geoResult.innerHTML = `
+                <div class="geo-placeholder">
+                    <span class="geo-icon">⚠️</span>
+                    <p>Unable to retrieve your location. Please enable location services.</p>
+                </div>
+            `;
+        }
+    );
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Earth's radius in km
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+}
+
+function toRad(degrees) {
+    return degrees * (Math.PI / 180);
+}
+
+function findNearestWonder(userLat, userLon) {
+    let nearest = null;
+    let minDistance = Infinity;
+
+    Object.keys(wonderLocations).forEach(key => {
+        const wonder = wonderLocations[key];
+        const distance = calculateDistance(userLat, userLon, wonder.lat, wonder.lon);
+        if (distance < minDistance) {
+            minDistance = distance;
+            nearest = { ...wonder, distance, id: key };
+        }
+    });
+
+    displayNearestWonder(nearest, userLat, userLon);
+}
+
+function displayNearestWonder(wonder, userLat, userLon) {
+    const geoResult = document.getElementById('geoResult');
+    
+    const distances = Object.keys(wonderLocations).map(key => {
+        const w = wonderLocations[key];
+        const dist = calculateDistance(userLat, userLon, w.lat, w.lon);
+        return { ...w, distance: dist, id: key };
+    }).sort((a, b) => a.distance - b.distance);
+
+    let html = '<div class="geo-data">';
+    html += '<h3>📍 Your Location Results</h3>';
+    html += `<div class="geo-item"><strong>Your Coordinates:</strong> ${userLat.toFixed(4)}°, ${userLon.toFixed(4)}°</div>`;
+    html += `<div class="geo-item"><strong>Nearest Wonder:</strong> ${wonder.name}</div>`;
+    html += `<div class="geo-item"><strong>Distance:</strong> ${Math.round(wonder.distance)} km</div>`;
+    html += '<div class="geo-item"><strong>All Wonders (by distance):</strong></div>';
+    
+    distances.forEach((w, index) => {
+        html += `<div class="geo-item">${index + 1}. ${w.name} - ${Math.round(w.distance)} km</div>`;
+    });
+    
+    html += '</div>';
+    
+    geoResult.innerHTML = html;
+}
+
+// ==========================================
+// NAVIGATION FUNCTIONALITY
+// ==========================================
+
+// Sticky navigation on scroll
+const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Mobile menu toggle
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Active navigation link based on scroll position
+const sections = document.querySelectorAll('section[id]');
+
+function highlightNavigation() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            if (navLink) navLink.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', highlightNavigation);
+
+</script>
+</body>
+</html>
